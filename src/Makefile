@@ -10,7 +10,7 @@ fifo: $(OBJS) without_mods.o
 
 test: lru
 	./lru ../BACKING_STORE.bin ../addresses.txt > example_output.txt
-	diff ../correct.txt example_output.txt
+	diff ../correct_lru.txt example_output.txt
 
 mem_manager.o: mem_manager.c scanner.h dll.h
 	gcc $(OPTS) $(FLAGS) mem_manager.c
@@ -25,4 +25,4 @@ dll.o: dll.c dll.h
 	gcc $(OPTS) $(FLAGS) dll.c
 
 clean:
-	rm -f $(OBJS) lru fifo without_mods.o
+	rm -f $(OBJS) lru fifo without_mods.o example_output.txt
