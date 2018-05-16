@@ -1,0 +1,7 @@
+Created for Assignment 5 of CS426-001 - "Designing a Virtual Memory Manager" in OS Concepts.
+Reads in a file of logical addresses, and returns the contents at the physical addresses(in a bin).
+
+To create the full executable, simple type "make" or "make lru". To create the unmodded executable(without page replacement), use "make fifo". The executables created will have the same names(e.g. lru and fifo).
+There is only one argument needed - the location of the logical address file.
+I have included some test files(BACKING_STORE.bin, addresses.txt, and correct.txt).
+The dll files are needed to implement the page swapping mechanism(using LRU replacement with a linked list implementation), while the scanner files are needed to read in the backing store.
